@@ -1,0 +1,21 @@
+{
+  "name": "jesspinkman/bs-pure",
+  "type": "library",
+  "license": "MIT",
+  "description": "Bootstrap extension to Pure library",
+  "require": {
+    "php": "^7.2",
+    "jesspinkman/pure": "^2.2"
+  },
+  "authors": [
+    {
+      "name": "Serge Goncalves",
+      "email": "serge.goncalves@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "BSPure\\": "src"
+    }
+  }
+}

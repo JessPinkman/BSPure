@@ -1,0 +1,61 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "36111debe8f6e6ba74a6d6459cc4a53a",
+    "packages": [
+        {
+            "name": "jesspinkman/pure",
+            "version": "2.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/JessPinkman/Pure.git",
+                "reference": "4520108c41b12efe836100f1868a02da56cb1fac"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/4520108c41b12efe836100f1868a02da56cb1fac",
+                "reference": "4520108c41b12efe836100f1868a02da56cb1fac",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.2"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Pure\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Serge Goncalves",
+                    "email": "serge.goncalves@gmail.com"
+                }
+            ],
+            "description": "Create HTML Markups without HTML code, easily nest elements and set attributes",
+            "support": {
+                "issues": "https://github.com/JessPinkman/Pure/issues",
+                "source": "https://github.com/JessPinkman/Pure/tree/2.2.0"
+            },
+            "time": "2021-03-05T03:21:05+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "php": "^7.2"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "2.0.0"
+}
