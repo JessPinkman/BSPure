@@ -2,10 +2,11 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSLayout;
+
 class NavBar extends BSBaseComponent
 {
     public BSBaseComponent $container;
-    public BSBaseComponent $toggle;
 
     public function __construct(bool $fluid = true)
     {
@@ -14,6 +15,11 @@ class NavBar extends BSBaseComponent
         parent::___(
             $this->container = BSLayout::container($fluid ? 'fluid' : null)
         );
+    }
+
+    public function container($request): self
+    {
+        return $this->pureAccess('container', $request);
     }
 
     public function ___(...$children): self
@@ -27,7 +33,7 @@ class NavBar extends BSBaseComponent
         return $this->class("navbar-expand-$bp");
     }
 
-    public function navStyle(string $color): self
+    public function variant(string $color): self
     {
         return $this->class("navbar-$color");
     }

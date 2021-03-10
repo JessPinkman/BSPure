@@ -2,6 +2,7 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSPure;
 use Pure\Fragment;
 
 class Loader extends Fragment

@@ -1,6 +1,8 @@
 <?php
 
-namespace BSPure\Components;
+namespace BSPure;
+
+use BSPure\Components\BSBaseComponent;
 
 class BSForm extends BSPure
 {

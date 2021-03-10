@@ -2,6 +2,8 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSPure;
+
 class Modal extends BSBaseComponent
 {
     public BSBaseComponent $dialog;

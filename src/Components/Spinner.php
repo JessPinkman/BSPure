@@ -2,6 +2,8 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSPure;
+
 class Spinner extends BSBaseComponent
 {
     public function __construct(bool $border)

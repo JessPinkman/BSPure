@@ -2,7 +2,8 @@
 
 namespace BSPure\Components;
 
-use Closure;
+use BSPure\BSComponent;
+use BSPure\BSPure;
 
 class AccordionItem extends BSBaseComponent
 {

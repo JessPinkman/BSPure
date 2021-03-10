@@ -1,6 +1,20 @@
 <?php
 
-namespace BSPure\Components;
+namespace BSPure;
+
+use BSPure\Components\Accordion;
+use BSPure\Components\AccordionItem;
+use BSPure\Components\Breadcrumb;
+use BSPure\Components\BreadcrumbItem;
+use BSPure\Components\BSBaseComponent;
+use BSPure\Components\Carousel;
+use BSPure\Components\Dropdown;
+use BSPure\Components\Loader;
+use BSPure\Components\Modal;
+use BSPure\Components\NavBar;
+use BSPure\Components\PageItem;
+use BSPure\Components\Progress;
+use BSPure\Components\Spinner;
 
 class BSComponent extends BSPure
 {
@@ -15,10 +29,10 @@ class BSComponent extends BSPure
         return new AccordionItem($show);
     }
 
-    public static function alert(): BSBaseComponent
+    public static function alert(string $variant = 'primary'): BSBaseComponent
     {
         return self::div()
-            ->class('alert')
+            ->class("alert alert-$variant")
             ->role('alert');
     }
 
@@ -194,6 +208,11 @@ class BSComponent extends BSPure
             ->class('nav-link');
     }
 
+    /**
+     * Create a navbar element
+     * Use variant to change text colors
+     * append BSComponent::{navBarBrand, navBarToggler, navBarCollapse }
+     */
     public static function navBar(bool $fluid = true): NavBar
     {
         return new NavBar($fluid);

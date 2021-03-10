@@ -2,6 +2,8 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSPure;
+
 class Breadcrumb extends BSBaseComponent
 {
     public BSBaseComponent $list;

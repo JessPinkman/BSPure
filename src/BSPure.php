@@ -1,7 +1,9 @@
 <?php
 
-namespace BSPure\Components;
+namespace BSPure;
 
+use BSPure\Components\BSBaseComponent;
+use BSPure\Components\Loader;
 use Pure\Fragment;
 use Pure\Pure;
 
@@ -63,10 +65,14 @@ class BSPure extends Pure
         return new Loader;
     }
 
-    public static function requiredMeta(string $page_title): Fragment
+    public function head(): BSBaseComponent
+    {
+        return (new BSBaseComponent('head'))(self::requiredMeta());
+    }
+
+    public static function requiredMeta(): Fragment
     {
         return new Fragment(
-            self::title($page_title),
             self::meta()->charset('utf-8'),
             self::meta()->name('viewport')->content('width=device-width, initial-scale=1, shrink-to-fit=no'),
         );

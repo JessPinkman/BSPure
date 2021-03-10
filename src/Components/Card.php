@@ -44,7 +44,6 @@ class Card extends BSBaseComponent
 
         if (!$this->title) {
             $this->___($this->title = new Card('title', 'h6'));
-            dump($this->title);
         }
 
         $this->pureAccess('title', $request);
@@ -57,7 +56,6 @@ class Card extends BSBaseComponent
 
         if (!$this->text) {
             $this->___($this->text = new Card('text', 'p'));
-            dump($this->text);
         }
 
         $this->pureAccess('text', $request);

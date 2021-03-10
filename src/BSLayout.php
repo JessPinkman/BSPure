@@ -1,6 +1,10 @@
 <?php
 
-namespace BSPure\Components;
+namespace BSPure;
+
+use BSPure\Components\BSBaseComponent;
+use Error;
+use Pure\Component;
 
 /*
        XS           SM             MD            LG              XL             XXL
@@ -8,6 +12,9 @@ namespace BSPure\Components;
               >576          >768          >992           >1200            >1400
 */
 
+/**
+ * Factory for { container, row, col}
+ */
 class BSLayout extends BSPure
 {
 
@@ -32,15 +39,5 @@ class BSLayout extends BSPure
     public static function row(): BSBaseComponent
     {
         return self::div()->class('row');
-    }
-
-    public static function media(): BSBaseComponent
-    {
-        return self::div()->class('media');
-    }
-
-    public static function mediaBody(): BSBaseComponent
-    {
-        return self::div()->class('media-body');
     }
 }

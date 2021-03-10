@@ -2,6 +2,8 @@
 
 namespace BSPure\Components;
 
+use BSPure\BSPure;
+
 class PageItem extends BSBaseComponent
 {
     public ?BSBaseComponent $link = null;

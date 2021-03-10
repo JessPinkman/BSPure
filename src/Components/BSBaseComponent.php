@@ -558,6 +558,21 @@ class BSBaseComponent extends Component
         return $this->class($class);
     }
 
+    /**
+     * @param int $value {25 / 50 / 75 /100 / auto}
+     * @param bool $rel_to_viewport
+     * @param string|null $modifier {null / min / max}
+     */
+    public function h(int $value, bool $rel_to_viewport = false, ?string $modifier = null): self
+    {
+        $class = '';
+        $modifier && $class .= $modifier . '-';
+        $rel_to_viewport && $class .= 'v';
+        $class .= 'h-' . $value;
+
+        return $this->class($class);
+    }
+
     public function visible(bool $is_visible = false): self
     {
         return $this->class($is_visible ? 'visible' : 'unvisible');
