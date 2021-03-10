@@ -1,6 +1,6 @@
 # BSPure
 
-This is a Boostrap extension of the Library [Pure](https://github.com/JessPinkman/Pure).
+This is a Bootstrap extension of the Library [Pure](https://github.com/JessPinkman/Pure).
 
 - Create reusable Bootstrap components and layouts.
 - Easily use all Bootstrap utilities on any component.
