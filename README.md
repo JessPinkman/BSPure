@@ -57,5 +57,5 @@ This is the factory to create Boostrap layout components (col, row, container)
 BSComponent::col(5, 'md-3')('This is a column');
 ```
 ```html
-<div class="col-5, col-md-3">This is a column</div>
+<div class="col-5 col-md-3">This is a column</div>
 ```
