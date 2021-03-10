@@ -7,7 +7,8 @@ This is a Bootstrap extension of the Library [Pure](https://github.com/JessPinkm
 - Reduce your code by 60%.
 - Benefit from autocompletion and helpful documentation while typing.
 
-# There are 3 factories*, all of them output Bootstrap Base Components (BSBaseComponent):
+# 3 FACTORIES
+all of them output Bootstrap Base Components (BSBaseComponent):
 
 ## BSPure::{tag}
 
