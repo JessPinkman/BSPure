@@ -88,7 +88,7 @@ BSPure::html()(
     )
 );
 ```
-BSPURE character count: **684**
+BSPURE character count: **985**
 
 ```html
 <!DOCTYPE html>
@@ -128,7 +128,7 @@ BSPURE character count: **684**
 
 </html>
 ```
-HTML character count: **1490** (+118%)
+HTML character count: **1636**
 
 ## Object Oriented
 
