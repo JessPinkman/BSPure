@@ -43,7 +43,7 @@ BSPure::head()(
 
 ## BSComponent::{component}
 
-This is the factory to create Boostrap core components (accordions, buttons, modals, ...)
+This is the factory to create Boostrap core components (accordions, buttons, modals, carousels ...)
 ```php
 BSComponent::button('alert')('CLICK HERE');
 ```
@@ -71,16 +71,18 @@ BSPure::html()(
     ),
     BSPure::body()(
         BSComponent::navBar()->expand('lg')->variant('dark')->bg('dark')->sticky()(
-                BSComponent::navBarBrand()->href('/')('BSPure'),
-                BSComponent::navBarToggler('#menu'),
-                BSComponent::navBarCollapse('menu')->justifyContent('end')(
-                        BSComponent::navBarNav()(
-                            BSComponent::navLink('/')('HOME'),
-                            BSComponent::navLink('/products')('CATALOGUE')
-                        )
-                    )
-            ),
-        BSLayout::container('fluid')('...')
+            BSComponent::navBarBrand()->href('/')('BSPure'),
+            BSComponent::navBarToggler('#menu'),
+            BSComponent::navBarCollapse('menu')->justifyContent('end')(
+                BSComponent::navBarNav()(
+                    BSComponent::navLink('/')('HOME'),
+                    BSComponent::navLink('/products')('CATALOGUE')
+                )
+            )
+        ),
+        BSLayout::container('fluid')->h(100, true)->d('flex')->alignItems('center')->justifyContent('center')(
+            BSPure::h1()('HELLO WORLD !')
+        ),
     )
 );
 ```
@@ -117,7 +119,9 @@ BSPURE character count: **684**
                 </div>
             </div>
         </nav>
-        <div class="container-fluid">...</div>
+        <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
+          <h1>HELLO WORLD !</h1>
+        </div>
     </body>
 
 </html>
