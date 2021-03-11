@@ -4,7 +4,7 @@
   "license": "MIT",
   "description": "Bootstrap extension to Pure library",
   "require": {
-    "php": "^7.2",
+    "php": "^7.3",
     "jesspinkman/pure": "^2.2"
   },
   "authors": [
