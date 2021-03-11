@@ -84,11 +84,12 @@ BSPure::html()(
     )
 );
 ```
-BSPURE CHARACTER COUNT: **684**
+BSPURE character count: **684**
 
 ```html
 <!DOCTYPE html>
 <html>
+
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -102,13 +103,16 @@ BSPURE CHARACTER COUNT: **684**
 
     <body>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-            <div class="container-fluid"><a class="navbar-brand" href="/">BSPure</a><button data-bs-toggle="collapse"
-                    aria-expanded="false" aria-controls="#menu" data-bs-target="#menu" class="navbar-toggler"
-                    aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="container-fluid">
+                <a class="navbar-brand" href="/">BSPure</a>
+                <button data-bs-toggle="collapse" aria-expanded="false" aria-controls="#menu" data-bs-target="#menu"
+                    class="navbar-toggler" aria-label="toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
                 <div class="collapse navbar-collapse justify-content-end" id="menu">
                     <div class="navbar-nav">
-                      <a href="/" class="nav-link">HOME</a>
-                      <a href="/products" class="nav-link">CATALOGUE</a>
+                        <a href="/" class="nav-link">HOME</a>
+                        <a href="/products" class="nav-link">CATALOGUE</a>
                     </div>
                 </div>
             </div>
@@ -118,12 +122,12 @@ BSPURE CHARACTER COUNT: **684**
 
 </html>
 ```
-HTML CHARACTER COUNT: **1490** (+118%)
+HTML character count: **1490** (+118%)
 
-## OOP
+## Object Oriented
 
 Because BSPure revolves around objects, the possibilities are endless.
-inheritance, composition, loops, strict typing, etc ...
+Inheritance, composition, loops, strict typing, etc ...
 
 ```php
 /**
