@@ -178,6 +178,11 @@ echo AppComponentFactory::appButton('BUY NOW');
 rendered in [codepen](https://codepen.io/JessPinkman/full/zYoyZaL?editors=1000)
 
 ```php
+$git_url = 'https://github.com/JessPinkman/';
+$pure = $git_url . 'Pure';
+$BSpure = $git_url . 'BSPure';
+$bootstrap = 'https://getbootstrap.com/docs/5.0/getting-started/introduction/';
+
 BSPure::html()(
     BSPure::head()(
         BSPure::title('BSPure'),
