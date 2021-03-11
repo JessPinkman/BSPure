@@ -64,7 +64,7 @@ BSComponent::col(5, 'md-3')('This is a column');
 
 # PAGE EXAMPLE
 
-Here is an example of a basic page. With a responsive navbar [how it looks on codepen](https://codepen.io/JessPinkman/pen/wvoRzVd)
+Here is an example of a basic page. With a responsive navbar [how it looks on codepen](https://codepen.io/JessPinkman/full/wvoRzVd)
 ```php
 
 $base_url = 'https://github.com/JessPinkman/';
@@ -175,7 +175,7 @@ echo AppComponentFactory::appButton('BUY NOW');
 
 # Full Page
 
-rendered in [codepen](https://codepen.io/JessPinkman/pen/zYoyZaL?editors=1000)
+rendered in [codepen](https://codepen.io/JessPinkman/full/zYoyZaL?editors=1000)
 
 ```php
 BSPure::html()(
