@@ -59,3 +59,95 @@ BSComponent::col(5, 'md-3')('This is a column');
 ```html
 <div class="col-5 col-md-3">This is a column</div>
 ```
+
+# PAGE EXAMPLE
+
+Here is an example of a basic page.
+```php
+BSPure::html()(
+    BSPure::head()(
+        BSPure::title('BSPure'),
+        BSPure::loader()
+    ),
+    BSPure::body()(
+        BSComponent::navBar()->expand('lg')->variant('dark')->bg('dark')->sticky()(
+                BSComponent::navBarBrand()->href('/')('BSPure'),
+                BSComponent::navBarToggler('#menu'),
+                BSComponent::navBarCollapse('menu')->justifyContent('end')(
+                        BSComponent::navBarNav()(
+                            BSComponent::navLink('/')('HOME'),
+                            BSComponent::navLink('/products')('CATALOGUE')
+                        )
+                    )
+            ),
+        BSLayout::container('fluid')('...')
+    )
+);
+```
+BSPURE CHARACTER COUNT: **684**
+
+```html
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>BSPure</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+            integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anomymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+            crossorigin="anonymous"></script>
+    </head>
+
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+            <div class="container-fluid"><a class="navbar-brand" href="/">BSPure</a><button data-bs-toggle="collapse"
+                    aria-expanded="false" aria-controls="#menu" data-bs-target="#menu" class="navbar-toggler"
+                    aria-label="toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse justify-content-end" id="menu">
+                    <div class="navbar-nav">
+                      <a href="/" class="nav-link">HOME</a>
+                      <a href="/products" class="nav-link">CATALOGUE</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="container-fluid">...</div>
+    </body>
+
+</html>
+```
+HTML CHARACTER COUNT: **1490** (+118%)
+
+## OOP
+
+Because BSPure revolves around objects, the possibilities are endless.
+inheritance, composition, loops, strict typing, etc ...
+
+```php
+/**
+ * Custom factory to create app components
+ */
+class AppComponentFactory extends BSComponent
+{
+    /**
+     * Make a reusable component to create uniform buttons.
+     *
+     * Added classes: btn-warning rounded-pill px-3 py-1 m-3
+     */
+    public static function appButton(string $label): BSBaseComponent
+    {
+        return parent::button('warning')
+            ->rounded('pill')
+            ->p(3, 1)
+            ->m(3)
+            ->___($label);
+    }
+}
+
+echo AppComponentFactory::appButton('BUY NOW');
+```
+```html
+<button class="btn btn-warning rounded-pill px-3 py-1 m-3" type="button">BUY NOW</button>
+```
