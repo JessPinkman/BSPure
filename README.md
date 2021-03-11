@@ -4,15 +4,17 @@ This is a Bootstrap extension of the Library [Pure](https://github.com/JessPinkm
 
 - Create reusable Bootstrap components and layouts.
 - Easily use all Bootstrap utilities on any component.
-- Reduce your code by 60%.
-- Benefit from autocompletion and helpful documentation while typing.
+- Reduce lines of code.
+- Easier Typing (autocompletion, docblock documentation, type hints, ...).
 
-# 3 FACTORIES
-All of them output Bootstrap Base Components (BSBaseComponent):
+# 3 Factories and 1 Base Component
+
+Whereas [Pure\Pure](https://github.com/JessPinkman/Pure) outputs 'Pure\Component' instances, BSPure factories output 'BSPure\Components\BSBaseComponent' instances.
+BSBaseComponent instances have access to bootstrap utilities.
 
 ## BSPure::{tag}
 
-BSPure class is the base factory, use it to create any DOM elements with any html tag, just like Pure. The only difference is that the component has access to all bootstrap utilities. (see BSBaseComponent)
+BSPure class is a low level factory, use it to create any DOM elements with any html tag.
 ```php
 BSPure::div()->bg('primary', true)->m(5, 2)('Hello World');
 ```
@@ -27,7 +29,7 @@ BSPure::loader();
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anomymous">
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
 ```
-there is also some magic involved when calling specific tags, such as 'head', which adds the necessary meta tags for bootstrap.
+there is also some abstraction involved when calling specific tags, such as 'head', which adds the necessary meta tags for bootstrap.
 ```php
 BSPure::head()(
   BSPure::title()('this is the page title')
@@ -43,7 +45,7 @@ BSPure::head()(
 
 ## BSComponent::{component}
 
-This is the factory to create Boostrap core components (accordions, buttons, modals, carousels ...)
+This is the factory to create Boostrap core components (accordions, buttons, modals, carousels ...).
 ```php
 BSComponent::button('alert')('CLICK HERE');
 ```
@@ -52,7 +54,7 @@ BSComponent::button('alert')('CLICK HERE');
 ```
 ## BSLayout::{layout}
 
-This is the factory to create Boostrap layout components (col, row, container)
+This is the factory to create Boostrap layout components (col, row, container).
 ```php
 BSComponent::col(5, 'md-3')('This is a column');
 ```
