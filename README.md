@@ -66,6 +66,9 @@ BSComponent::col(5, 'md-3')('This is a column');
 
 Here is an example of a basic page. With a responsive navbar [how it looks on codepen](https://codepen.io/JessPinkman/pen/wvoRzVd)
 ```php
+
+$base_url = 'https://github.com/JessPinkman/';
+
 BSPure::html()(
     BSPure::head()(
         BSPure::title('BSPure'),
@@ -73,7 +76,7 @@ BSPure::html()(
     ),
     BSPure::body()(
         BSComponent::navBar()->expand('lg')->variant('dark')->bg('dark')->sticky()(
-            BSComponent::navBarBrand()->href('/')('BSPure'),
+            BSComponent::navBarBrand()->href($base_url)('JessPinkman'),
             BSComponent::navBarToggler('#menu'),
             BSComponent::navBarCollapse('menu')->justifyContent('end')(
                 BSComponent::navBarNav()(
@@ -168,4 +171,112 @@ echo AppComponentFactory::appButton('BUY NOW');
 ```
 ```html
 <button class="btn btn-warning rounded-pill px-3 py-1 m-3" type="button">BUY NOW</button>
+```
+
+# Full Page
+
+rendered in [codepen](https://codepen.io/JessPinkman/pen/zYoyZaL?editors=1000)
+
+```php
+BSPure::html()(
+    BSPure::head()(
+        BSPure::title('BSPure'),
+        BSPure::loader()
+    ),
+    BSPure::body()(
+        BSComponent::navBar()->variant('dark')->expand('lg')->bg('success', true)->sticky()->shadow('sm')(
+            BSComponent::navBarBrand()->href($git_url)('JessPinkman'),
+            BSComponent::navBarToggler('#menu'),
+            BSComponent::navBarCollapse('menu')->justifyContent('end')->m(5, 0)(
+                BSComponent::navBarNav()->gap(2)(
+                    BSComponent::navLink($pure)->target('_blank')('Pure'),
+                    BSComponent::navLink($BSpure)->target('_blank')('BSPure'),
+                    BSComponent::navLink($bootstrap)->target('_blank')('Bootstrap'),
+                )
+            )
+        ),
+        BSLayout::container('fluid')->text('center')->gap(5)->flexColumn()->d('flex')->p(5)(
+            BSPure::h1()("Visit the git repos !"),
+            BSLayout::row('fluid')->gap(5)->p(5)(
+                BSLayout::col('lg')(
+                    BSComponent::card()->text('start')->shadow()(
+                        BSComponent::cardHeader()->colors('light', 'dark')('Pure'),
+                        BSComponent::cardBody()(
+                            BSPure::h6()('Library to create, use and reuse components to generate html'),
+                            BSPure::ul()(
+                                BSPure::li()('Combine elements freely and seamlessly.'),
+                                BSPure::li()('Easily add attributes to any element with the use of magic __call.'),
+                                BSPure::li()('Create structures that you can interact with by extending the class'),
+                                BSPure::li()('Make your code shorter, clean, and readable.'),
+                            ),
+                            BSComponent::cardLink($pure)->target('_blank')->stretchedLink()
+                        )
+                    )
+                ),
+                BSLayout::col('lg')(
+                    BSComponent::card()->text('start')->shadow()(
+                        BSComponent::cardHeader()->colors('light', 'dark')('BSPure'),
+                        BSComponent::cardBody()(
+                            BSPure::h6()('This is a Bootstrap extension of the Library Pure'),
+                            BSPure::ul()(
+                                BSPure::li()('Create reusable Bootstrap components and layouts.'),
+                                BSPure::li()('Easily use all Bootstrap utilities on any component.'),
+                                BSPure::li()('Reduce lines of code.'),
+                                BSPure::li()('Easier Typing (autocompletion, docblock documentation, type hints, ...)
+                                '),
+                            ),
+                            BSComponent::cardLink($BSpure)->target('_blank')->stretchedLink()
+                        )
+                    )
+                ),
+            ),
+        ),
+        BSPure::div()->text('center')(
+            BSComponent::button('info')
+                ->targetModal('modal')
+                ->text('light')
+                ->rounded('pill')
+                ->p(5, 2)
+                ->shadow()
+                ->___(
+                    BSPure::h1()('show me')
+                ),
+            BSComponent::modal('modal')->fade()->centered()(
+                BSComponent::modalBody()->rounded()->border(0)->text('start')(
+                    BSPure::code()('BSComponent::alert("danger")->text("center")("Alert");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::alert("success")->text("center")("SAVED !");'),
+                    BSPure::br(),
+                    BSComponent::alert('danger')->text('center')->m(0, 1)("Alert"),
+                    BSComponent::alert('success')->text('center')->m(0, 1)("SAVED !"),
+                    BSPure::hr(),
+                    BSPure::code()('BSComponent::spinner(true)->text("warning");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::spinner(true)->text("danger");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::spinner(true)->text("success");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::spinner(false)->text("warning");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::spinner(false)->text("danger");'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::spinner(false)->text("success");'),
+                    BSPure::br(),
+                    BSComponent::spinner(true)->text('warning'),
+                    BSComponent::spinner(true)->text('danger'),
+                    BSComponent::spinner(true)->text('success'),
+                    BSComponent::spinner(false)->text('warning'),
+                    BSComponent::spinner(false)->text('danger'),
+                    BSComponent::spinner(false)->text('success'),
+                    BSPure::hr(),
+                    BSPure::code()('BSComponent::progress(30);'),
+                    BSPure::br(),
+                    BSPure::code()('BSComponent::progress(80);'),
+                    BSComponent::progress(30)->m(0, 1),
+                    BSComponent::progress(80)->m(0, 1),
+                )
+            )
+        ),
+    )
+);
 ```
