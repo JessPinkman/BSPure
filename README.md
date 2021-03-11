@@ -64,7 +64,7 @@ BSComponent::col(5, 'md-3')('This is a column');
 
 # PAGE EXAMPLE
 
-Here is an example of a basic page.
+Here is an example of a basic page. [codepen](https://codepen.io/JessPinkman/pen/wvoRzVd)
 ```php
 BSPure::html()(
     BSPure::head()(
@@ -83,12 +83,16 @@ BSPure::html()(
             )
         ),
         BSLayout::container('fluid')->h(100, true)->d('flex')->alignItems('center')->justifyContent('center')(
-            BSPure::h1()('HELLO WORLD !')
+            BSPure::a()->href('https://github.com/JessPinkman/BSPure')(
+                BSComponent::button('danger')->rounded('pill')->p(5, 2)->shadow()(
+                    BSPure::h1()('BSPure')
+                )
+            )
         ),
     )
 );
 ```
-BSPURE character count: **985**
+BSPURE character count: **930**
 
 ```html
 <!DOCTYPE html>
@@ -122,13 +126,17 @@ BSPURE character count: **985**
             </div>
         </nav>
         <div class="container-fluid vh-100 d-flex align-items-center justify-content-center">
-          <h1>HELLO WORLD !</h1>
+            <a href="https://github.com/JessPinkman/BSPure">
+                <button class="btn btn-danger rounded-pill px-5 py-2 shadow" type="button">
+                    <h1>BSPure</h1>
+                </button>
+            </a>
         </div>
     </body>
 
 </html>
 ```
-HTML character count: **1636**
+HTML character count: **1831**
 
 ## Object Oriented
 
