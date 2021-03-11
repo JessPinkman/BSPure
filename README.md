@@ -64,7 +64,7 @@ BSComponent::col(5, 'md-3')('This is a column');
 
 # PAGE EXAMPLE
 
-Here is an example of a basic page. [codepen](https://codepen.io/JessPinkman/pen/wvoRzVd)
+Here is an example of a basic page. With a responsive navbar [how it looks on codepen](https://codepen.io/JessPinkman/pen/wvoRzVd)
 ```php
 BSPure::html()(
     BSPure::head()(
