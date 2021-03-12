@@ -65,7 +65,7 @@ class BSPure extends Pure
         return new Loader;
     }
 
-    public function head(): BSBaseComponent
+    public static function head(): BSBaseComponent
     {
         return (new BSBaseComponent('head'))(self::requiredMeta());
     }
