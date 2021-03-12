@@ -2,7 +2,6 @@
 
 namespace BSPure\Components;
 
-use BSPure\BSComponent;
 use BSPure\BSPure;
 
 class Dropdown extends BSBaseComponent
@@ -16,7 +15,7 @@ class Dropdown extends BSBaseComponent
         $this
             ->class('dropdown')
             ->___(
-                $this->button = BSComponent::button($variant)
+                $this->button = BSPure::button($variant)
                     ->id($button_id)
                     ->dataBS('toggle', 'dropdown')
                     ->aria('expanded', 'false')

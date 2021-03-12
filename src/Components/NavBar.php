@@ -2,7 +2,7 @@
 
 namespace BSPure\Components;
 
-use BSPure\BSLayout;
+use BSPure\BSPure;
 
 class NavBar extends BSBaseComponent
 {
@@ -13,7 +13,7 @@ class NavBar extends BSBaseComponent
         parent::__construct('nav');
         $this->class('navbar');
         parent::___(
-            $this->container = BSLayout::container($fluid ? 'fluid' : null)
+            $this->container = BSPure::container($fluid ? 'fluid' : null)
         );
     }
 

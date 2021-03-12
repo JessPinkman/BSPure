@@ -2,7 +2,6 @@
 
 namespace BSPure\Components;
 
-use BSPure\BSComponent;
 use BSPure\BSPure;
 
 class AccordionItem extends BSBaseComponent
@@ -24,7 +23,7 @@ class AccordionItem extends BSBaseComponent
             $this->header = BSPure::{static::$header_tag}()
                 ->class('accordion-header')
                 ->___(
-                    $this->button = BSComponent::button()
+                    $this->button = BSPure::button()
                         ->class(false, $show ? 'accordion-button' : 'accordion-button collapsed')
                         ->dataBS('toggle', 'collapse')
                         ->aria('expanded', $show ? 'true' : 'false')
