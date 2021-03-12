@@ -1,21 +1,21 @@
-{
-  "name": "jesspinkman/bs-pure",
-  "type": "library",
-  "license": "MIT",
-  "description": "Bootstrap extension to Pure library",
-  "require": {
-    "php": "^7.3",
-    "jesspinkman/pure": "^2.2"
-  },
-  "authors": [
-    {
-      "name": "Serge Goncalves",
-      "email": "serge.goncalves@gmail.com"
-    }
-  ],
-  "autoload": {
-    "psr-4": {
-      "BSPure\\": "src"
+  {
+    "name": "jesspinkman/bs-pure",
+    "type": "library",
+    "license": "MIT",
+    "description": "Bootstrap extension to Pure library",
+    "require": {
+      "php": "^7.4",
+      "jesspinkman/pure": "^2.2"
+    },
+    "authors": [
+      {
+        "name": "Serge Goncalves",
+        "email": "serge.goncalves@gmail.com"
+      }
+    ],
+    "autoload": {
+      "psr-4": {
+        "BSPure\\": "src"
+      }
     }
   }
-}
