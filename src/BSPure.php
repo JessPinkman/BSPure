@@ -33,12 +33,10 @@ use Pure\Pure;
  * @method static BSBaseComponent blockquote
  * @method static BSBaseComponent body
  * @method static BSBaseComponent br
- * @method static BSBaseComponent button
  * @method static BSBaseComponent canvas
  * @method static BSBaseComponent caption
  * @method static BSBaseComponent cite
  * @method static BSBaseComponent code
- * @method static BSBaseComponent col
  * @method static BSBaseComponent colgroup
  * @method static BSBaseComponent data
  * @method static BSBaseComponent colgroup
@@ -65,13 +63,11 @@ use Pure\Pure;
  * @method static BSBaseComponent h4
  * @method static BSBaseComponent h5
  * @method static BSBaseComponent h6
- * @method static BSBaseComponent head
  * @method static BSBaseComponent header
  * @method static BSBaseComponent hr
  * @method static BSBaseComponent html
  * @method static BSBaseComponent i
  * @method static BSBaseComponent iframe
- * @method static BSBaseComponent img
  * @method static BSBaseComponent input
  * @method static BSBaseComponent ins
  * @method static BSBaseComponent kbd
