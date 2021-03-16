@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "36111debe8f6e6ba74a6d6459cc4a53a",
+    "content-hash": "6bb8de416fd88634eda8b5fb6a0d2a9b",
     "packages": [
         {
             "name": "jesspinkman/pure",
-            "version": "2.2.0",
+            "version": "2.2.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JessPinkman/Pure.git",
-                "reference": "4520108c41b12efe836100f1868a02da56cb1fac"
+                "reference": "e1a2666fc1ca8e04be454c3473dfa36e03129f4e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/4520108c41b12efe836100f1868a02da56cb1fac",
-                "reference": "4520108c41b12efe836100f1868a02da56cb1fac",
+                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/e1a2666fc1ca8e04be454c3473dfa36e03129f4e",
+                "reference": "e1a2666fc1ca8e04be454c3473dfa36e03129f4e",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.2"
+                "php": "^7.4 | ^8.0"
             },
             "type": "library",
             "autoload": {
@@ -42,9 +42,9 @@
             "description": "Create HTML Markups without HTML code, easily nest elements and set attributes",
             "support": {
                 "issues": "https://github.com/JessPinkman/Pure/issues",
-                "source": "https://github.com/JessPinkman/Pure/tree/2.2.0"
+                "source": "https://github.com/JessPinkman/Pure/tree/2.2.4"
             },
-            "time": "2021-03-05T03:21:05+00:00"
+            "time": "2021-03-16T02:19:58+00:00"
         }
     ],
     "packages-dev": [],
@@ -54,7 +54,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.2"
+        "php": "^7.4 | ^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

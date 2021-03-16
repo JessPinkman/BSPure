@@ -19,13 +19,46 @@ use Pure\Fragment;
 use Pure\Pure;
 
 /**
- * @method static BSBaseComponent div
- * @method static BSBaseComponent p
  * @method static BSBaseComponent a
- * @method static BSBaseComponent span
- * @method static BSBaseComponent ul
- * @method static BSBaseComponent ol
- * @method static BSBaseComponent li
+ * @method static BSBaseComponent abbr
+ * @method static BSBaseComponent address
+ * @method static BSBaseComponent area
+ * @method static BSBaseComponent article
+ * @method static BSBaseComponent aside
+ * @method static BSBaseComponent audio
+ * @method static BSBaseComponent b
+ * @method static BSBaseComponent base
+ * @method static BSBaseComponent bdi
+ * @method static BSBaseComponent bdo
+ * @method static BSBaseComponent blockquote
+ * @method static BSBaseComponent body
+ * @method static BSBaseComponent br
+ * @method static BSBaseComponent button
+ * @method static BSBaseComponent canvas
+ * @method static BSBaseComponent caption
+ * @method static BSBaseComponent cite
+ * @method static BSBaseComponent code
+ * @method static BSBaseComponent col
+ * @method static BSBaseComponent colgroup
+ * @method static BSBaseComponent data
+ * @method static BSBaseComponent colgroup
+ * @method static BSBaseComponent data
+ * @method static BSBaseComponent datalist
+ * @method static BSBaseComponent dd
+ * @method static BSBaseComponent del
+ * @method static BSBaseComponent details
+ * @method static BSBaseComponent dfn
+ * @method static BSBaseComponent dialog
+ * @method static BSBaseComponent div
+ * @method static BSBaseComponent dl
+ * @method static BSBaseComponent dt
+ * @method static BSBaseComponent em
+ * @method static BSBaseComponent embed
+ * @method static BSBaseComponent fieldset
+ * @method static BSBaseComponent figcaption
+ * @method static BSBaseComponent figure
+ * @method static BSBaseComponent footer
+ * @method static BSBaseComponent form
  * @method static BSBaseComponent h1
  * @method static BSBaseComponent h2
  * @method static BSBaseComponent h3
@@ -33,9 +66,70 @@ use Pure\Pure;
  * @method static BSBaseComponent h5
  * @method static BSBaseComponent h6
  * @method static BSBaseComponent head
- * @method static BSBaseComponent title
+ * @method static BSBaseComponent header
+ * @method static BSBaseComponent hr
+ * @method static BSBaseComponent html
+ * @method static BSBaseComponent i
+ * @method static BSBaseComponent iframe
+ * @method static BSBaseComponent img
+ * @method static BSBaseComponent input
+ * @method static BSBaseComponent ins
+ * @method static BSBaseComponent kbd
+ * @method static BSBaseComponent label
+ * @method static BSBaseComponent legend
+ * @method static BSBaseComponent li
+ * @method static BSBaseComponent link
+ * @method static BSBaseComponent main
+ * @method static BSBaseComponent map
+ * @method static BSBaseComponent mark
  * @method static BSBaseComponent meta
- * @method static BSBaseComponent body
+ * @method static BSBaseComponent meter
+ * @method static BSBaseComponent nav
+ * @method static BSBaseComponent noscript
+ * @method static BSBaseComponent object
+ * @method static BSBaseComponent ol
+ * @method static BSBaseComponent optgroup
+ * @method static BSBaseComponent option
+ * @method static BSBaseComponent output
+ * @method static BSBaseComponent p
+ * @method static BSBaseComponent param
+ * @method static BSBaseComponent picture
+ * @method static BSBaseComponent pre
+ * @method static BSBaseComponent progress
+ * @method static BSBaseComponent q
+ * @method static BSBaseComponent rp
+ * @method static BSBaseComponent rt
+ * @method static BSBaseComponent ruby
+ * @method static BSBaseComponent s
+ * @method static BSBaseComponent samp
+ * @method static BSBaseComponent script
+ * @method static BSBaseComponent section
+ * @method static BSBaseComponent select
+ * @method static BSBaseComponent sidebar
+ * @method static BSBaseComponent small
+ * @method static BSBaseComponent source
+ * @method static BSBaseComponent span
+ * @method static BSBaseComponent strong
+ * @method static BSBaseComponent style
+ * @method static BSBaseComponent sub
+ * @method static BSBaseComponent svg
+ * @method static BSBaseComponent table
+ * @method static BSBaseComponent tbody
+ * @method static BSBaseComponent td
+ * @method static BSBaseComponent template
+ * @method static BSBaseComponent textarea
+ * @method static BSBaseComponent tfoot
+ * @method static BSBaseComponent th
+ * @method static BSBaseComponent thead
+ * @method static BSBaseComponent time
+ * @method static BSBaseComponent title
+ * @method static BSBaseComponent tr
+ * @method static BSBaseComponent track
+ * @method static BSBaseComponent u
+ * @method static BSBaseComponent ul
+ * @method static BSBaseComponent var
+ * @method static BSBaseComponent video
+ * @method static BSBaseComponent wbr
  */
 class BSPure extends Pure
 {
