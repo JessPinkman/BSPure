@@ -139,16 +139,21 @@ class BSPure extends Pure
         return $component;
     }
 
-    public static function img(bool $fluid = false, bool $thumbnail = false): BSBaseComponent
+    /**
+     * @param string ...$modifiers {null, fluid, thumbnail}
+     */
+    public static function img(string ...$modifiers): BSBaseComponent
     {
         $img = (new BSBaseComponent('img'));
-        $fluid && $img->class('img-fluid');
-        $thumbnail && $img->class('img-thumbnail');
+
+        foreach ($modifiers as $prop) {
+            $img->class("img-$prop");
+        }
 
         return $img;
     }
 
-    public function table(string ...$modifiers): BSBaseComponent
+    public static function table(string ...$modifiers): BSBaseComponent
     {
         $table = (new BSBaseComponent('table'));
 
@@ -279,12 +284,13 @@ class BSPure extends Pure
         return self::$tag()->class('card');
     }
 
-    public static function cardImg(string $src, string $alt, ?string $variant = null): BSBaseComponent
+    /**
+     * @param string|null $card_variant {top, bottom}
+     * @param string ...$modifiers {null, fluid, thumbnail}
+     */
+    public static function cardImg(?string $card_variant = null, string ...$modifiers): BSBaseComponent
     {
-        return self::img()
-            ->class($variant ? "card-img-$variant" : 'card-img')
-            ->src($src)
-            ->alt($alt);
+        return self::img(...$modifiers)->class($card_variant ? "card-img-$card_variant" : 'card-img');
     }
 
     public static function cardBody($tag = 'div'): BSBaseComponent
