@@ -17,23 +17,23 @@ class NavBar extends BSBaseComponent
         );
     }
 
-    public function container($request): self
+    public function container($request): static
     {
         return $this->pureAccess('container', $request);
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         $this->container->___(...$children);
         return $this;
     }
 
-    public function expand(string $bp = 'md'): self
+    public function expand(string $bp = 'md'): static
     {
         return $this->class("navbar-expand-$bp");
     }
 
-    public function variant(string $color): self
+    public function variant(string $color): static
     {
         return $this->class("navbar-$color");
     }

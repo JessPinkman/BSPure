@@ -22,7 +22,7 @@ class BreadcrumbItem extends BSBaseComponent
         }
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         if ($this->link) {
             $this->pureAccess('link', ...$children);

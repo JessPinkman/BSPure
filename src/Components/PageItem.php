@@ -15,7 +15,7 @@ class PageItem extends BSBaseComponent
         parent::___($this->link = BSPure::a()->class('page-link')->href($href));
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         $this->link->___(...$children);
         return $this;

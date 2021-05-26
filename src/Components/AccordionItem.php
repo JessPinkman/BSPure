@@ -37,12 +37,12 @@ class AccordionItem extends BSBaseComponent
         );
     }
 
-    public function button($request): self
+    public function button($request): static
     {
         return $this->pureAccess('button', $request);
     }
 
-    public function body($request): self
+    public function body($request): static
     {
         return $this->pureAccess('body', $request);
     }

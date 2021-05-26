@@ -17,7 +17,7 @@ class Spinner extends BSBaseComponent
             );
     }
 
-    public function color(string $color): self
+    public function color(string $color): static
     {
         return $this->class("text-$color");
     }

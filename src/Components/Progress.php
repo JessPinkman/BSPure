@@ -24,13 +24,13 @@ class Progress extends BSBaseComponent
         );
     }
 
-    public function color(string $color): self
+    public function color(string $color): static
     {
         $this->bar->bg($color);
         return $this;
     }
 
-    public function isStriped(bool $animated = false): self
+    public function isStriped(bool $animated = false): static
     {
         $this->bar->class($animated ? 'progress-bar-striped progress-bar-animated' : 'progress-bar-striped');
         return $this;

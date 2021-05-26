@@ -4,24 +4,24 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6bb8de416fd88634eda8b5fb6a0d2a9b",
+    "content-hash": "bc56a4a9a2af8fa3d3ed74d79b383d4f",
     "packages": [
         {
             "name": "jesspinkman/pure",
-            "version": "2.2.4",
+            "version": "3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JessPinkman/Pure.git",
-                "reference": "e1a2666fc1ca8e04be454c3473dfa36e03129f4e"
+                "reference": "29376da15847bbf184c582627a52729839e50229"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/e1a2666fc1ca8e04be454c3473dfa36e03129f4e",
-                "reference": "e1a2666fc1ca8e04be454c3473dfa36e03129f4e",
+                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/29376da15847bbf184c582627a52729839e50229",
+                "reference": "29376da15847bbf184c582627a52729839e50229",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.4 | ^8.0"
+                "php": "^8.0"
             },
             "type": "library",
             "autoload": {
@@ -42,9 +42,9 @@
             "description": "Create HTML Markups without HTML code, easily nest elements and set attributes",
             "support": {
                 "issues": "https://github.com/JessPinkman/Pure/issues",
-                "source": "https://github.com/JessPinkman/Pure/tree/2.2.4"
+                "source": "https://github.com/JessPinkman/Pure/tree/3.0.0"
             },
-            "time": "2021-03-16T02:19:58+00:00"
+            "time": "2021-05-26T10:53:46+00:00"
         }
     ],
     "packages-dev": [],
@@ -54,7 +54,7 @@
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.4 | ^8.0"
+        "php": "^8.0"
     },
     "platform-dev": [],
     "plugin-api-version": "2.0.0"

@@ -14,7 +14,7 @@ class Card extends BSBaseComponent
         $this->class($card_subclass ? "card-$card_subclass" : 'card');
     }
 
-    public function header($request): self
+    public function header($request): static
     {
 
         if (!$this->header) {
@@ -27,7 +27,7 @@ class Card extends BSBaseComponent
         return $this;
     }
 
-    public function body($request): self
+    public function body($request): static
     {
 
         if (!$this->body) {
@@ -39,7 +39,7 @@ class Card extends BSBaseComponent
         return $this;
     }
 
-    public function title($request): self
+    public function title($request): static
     {
 
         if (!$this->title) {
@@ -51,7 +51,7 @@ class Card extends BSBaseComponent
         return $this;
     }
 
-    public function text($request): self
+    public function text($request): static
     {
 
         if (!$this->text) {

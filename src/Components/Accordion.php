@@ -14,12 +14,12 @@ class Accordion extends BSBaseComponent
         $this->id($id);
     }
 
-    public function flush(): self
+    public function flush(): static
     {
         return $this->class('accordion-flush');
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         foreach ($children as $child) {
             $count = count($this->children) + 1;

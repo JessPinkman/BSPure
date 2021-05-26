@@ -28,7 +28,7 @@ class BSBaseComponent extends Component
      *
      * DECORATION: decoration-{underline, line-through, none}
      */
-    public function text(string ...$modifiers): self
+    public function text(string ...$modifiers): static
     {
         foreach ($modifiers as $prop) {
             $this->class('text-' . $prop);
@@ -36,7 +36,7 @@ class BSBaseComponent extends Component
         return $this;
     }
 
-    public function fontMonospace(): self
+    public function fontMonospace(): static
     {
         return $this->class('font-monospace');
     }
@@ -44,7 +44,7 @@ class BSBaseComponent extends Component
     /**
      * @param int $size {1...6}
      */
-    public function fs(int $size): self
+    public function fs(int $size): static
     {
         return $this->class("fs-$size");
     }
@@ -52,9 +52,9 @@ class BSBaseComponent extends Component
     /**
      * @param string $postion {baseline, top, middle, bottom, text-top, text-bottom}
      */
-    public function align(string $postion): self
+    public function align(string $position): static
     {
-        return $this->class("align-$postion");
+        return $this->class("align-$position");
     }
 
     /**
@@ -63,7 +63,7 @@ class BSBaseComponent extends Component
      *
      * STYLE: {italic, normal}
      */
-    public function fw(string ...$modifiers): self
+    public function fw(string ...$modifiers): static
     {
         foreach ($modifiers as $prop) {
             $this->class('fw-' . $prop);
@@ -72,9 +72,10 @@ class BSBaseComponent extends Component
     }
 
     /**
+     * line-height
      * @param string $size {1, sm, base, lg}
      */
-    public function lh(string $size): self
+    public function lh(string $size): static
     {
         return $this->class("lh-$size");
     }
@@ -82,7 +83,7 @@ class BSBaseComponent extends Component
     /**
      * colors: {primary, secondary, success, danger, warning, info, light, dark, body, muted, white, black-50, white-50}
      */
-    public function bg(string $color, bool $gradient = false): self
+    public function bg(string $color, bool $gradient = false): static
     {
         $this->class('bg-' . $color);
         $gradient && $this->class('bg-gradient');
@@ -92,7 +93,7 @@ class BSBaseComponent extends Component
     /**
      * {primary, secondary, success, danger, warning, info, light, dark, body, muted, white, black-50, white-50, reset}
      */
-    public function colors(?string $text = null, ?string $bg = null, ?string $border = null): self
+    public function colors(?string $text = null, ?string $bg = null, ?string $border = null): static
     {
         $text && $this->text($text);
         $bg && $this->bg($bg);
@@ -101,12 +102,12 @@ class BSBaseComponent extends Component
         return $this;
     }
 
-    public function dismissModal(string $label = 'close'): self
+    public function dismissModal(string $label = 'close'): static
     {
         return $this->data_bs_dismiss('modal')->aria_label($label);
     }
 
-    public function disabled(bool $is_disabled = true): self
+    public function disabled(bool $is_disabled = true): static
     {
         if ($is_disabled) {
             parent::class('disabled')
@@ -117,7 +118,7 @@ class BSBaseComponent extends Component
         return $this;
     }
 
-    public function active(bool $is_active = true, $aria = 'true'): self
+    public function active(bool $is_active = true, $aria = 'true'): static
     {
         if ($is_active) {
             $this->class('active')->aria_current($aria);
@@ -129,12 +130,12 @@ class BSBaseComponent extends Component
      * @param string $variant
      *  {primary, secondary, success, danger, warning, info, light, dark, body, muted, white, black-50, white-50, reset}
      */
-    public function btn(string $variant = 'primary'): self
+    public function btn(string $variant = 'primary'): static
     {
         return $this->class("btn btn-$variant")->type('button');
     }
 
-    public function visuallyHidden(bool $with_focus = false): self
+    public function visuallyHidden(bool $with_focus = false): static
     {
         return $this->class($with_focus ? 'visually-hidden-focusable' : 'visually-hidden');
     }
@@ -143,7 +144,7 @@ class BSBaseComponent extends Component
      * @param string $additionals
      * {action, primary, secondary, success, danger, warning, info, light, dark}
      */
-    public function listGroupItem(string ...$additionals): self
+    public function listGroupItem(string ...$additionals): static
     {
         $this->class('list-group-item');
         foreach ($additionals as $class) {
@@ -152,14 +153,14 @@ class BSBaseComponent extends Component
         return $this;
     }
 
-    public function targetModal(string $target_id): self
+    public function targetModal(string $target_id): static
     {
         return $this
             ->data_bs_toggle('modal')
             ->data_bs_target("#$target_id");
     }
 
-    public function fixed(bool $top = true): self
+    public function fixed(bool $top = true): static
     {
         return $this->class($top ? 'fixed-top' : 'fixed-bottom');
     }
@@ -167,7 +168,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function sticky(?string $bp = null): self
+    public function sticky(?string $bp = null): static
     {
         return $this->class($bp ? "sticky-$bp-top" : 'sticky-top');
     }
@@ -175,7 +176,7 @@ class BSBaseComponent extends Component
     /**
      * @param string $position {top, right, bottom, left}
      */
-    public function tooltip(string $text, string $position = 'top'): self
+    public function tooltip(string $text, string $position = 'top'): static
     {
         Loader::loadTooltip();
         return $this
@@ -187,7 +188,7 @@ class BSBaseComponent extends Component
     /**
      * @param string $position {top, right, bottom, left}
      */
-    public function popover(?string $title, ?string $text, string $position = 'top'): self
+    public function popover(?string $title, ?string $text, string $position = 'top'): static
     {
         Loader::loadPopover();
         $this
@@ -204,7 +205,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function flexRow(bool $reverse = false, ?string $bp = null): self
+    public function flexRow(bool $reverse = false, ?string $bp = null): static
     {
         $class = 'flex-row';
         $bp && $class .= "-$bp";
@@ -215,7 +216,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function flexColumn(bool $reverse = false, ?string $bp = null): self
+    public function flexColumn(bool $reverse = false, ?string $bp = null): static
     {
         $class = 'flex-column';
         $bp && $class .= "-$bp";
@@ -228,7 +229,7 @@ class BSBaseComponent extends Component
      * @param string $type start / end / none
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function float(string $type, ?string $bp = null): self
+    public function float(string $type, ?string $bp = null): static
     {
         $class = 'float';
         $bp && $class .= "-$bp";
@@ -241,7 +242,7 @@ class BSBaseComponent extends Component
      * @param string $type {start, end, center, between, around, evenly}
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function justifyContent(string $type, ?string $bp = null): self
+    public function justifyContent(string $type, ?string $bp = null): static
     {
         $class = 'justify-content';
         $bp && $class .= "-$bp";
@@ -254,7 +255,7 @@ class BSBaseComponent extends Component
      * @param string $type {start, end, center, baseline, stretch}
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function alignItems(string $type, ?string $bp = null): self
+    public function alignItems(string $type, ?string $bp = null): static
     {
         $class = 'align-items';
         $bp && $class .= "-$bp";
@@ -267,7 +268,7 @@ class BSBaseComponent extends Component
      * @param string $type {start, end, center, baseline, stretch}
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function alignSelf(string $type, ?string $bp = null): self
+    public function alignSelf(string $type, ?string $bp = null): static
     {
         $class = 'align-self';
         $bp && $class .= "-$bp";
@@ -279,7 +280,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function flexWrap(bool $wrap = true, ?string $bp = null, bool $reverse = false): self
+    public function flexWrap(bool $wrap = true, ?string $bp = null, bool $reverse = false): static
     {
         $class = 'flex';
         $bp && $class .= "-$bp";
@@ -293,7 +294,7 @@ class BSBaseComponent extends Component
      * @param int $order {1...12}
      * @param string|null $bp {null, sm, md, lg, xl}
      */
-    public function order(int $order, ?string $bp = null): self
+    public function order(int $order, ?string $bp = null): static
     {
         $class = 'order';
 
@@ -314,7 +315,7 @@ class BSBaseComponent extends Component
      *      ?({sm, md, xl, xxl}-)
      *      {none, inline, inline-block, block, grid, table, table-cell, table-row, flex, inline-flex}
      */
-    public function d(string ...$displays): self
+    public function d(string ...$displays): static
     {
         foreach ($displays as $prop) {
             $this->class("d-$prop");
@@ -326,7 +327,7 @@ class BSBaseComponent extends Component
      * @param string $type {static, relative, absolute, fixed, sticky}
      * @param string $positions {top, start, bottom, end}-{0, 50, 100}
      */
-    public function position(string $type, string ...$positions): self
+    public function position(string $type, string ...$positions): static
     {
         $this->class("position-$type");
         foreach ($positions as $prop) {
@@ -339,7 +340,7 @@ class BSBaseComponent extends Component
     /**
      * @param string $variant {primary, secondary, success, danger, warning, info, light, dark}
      */
-    public function link(string $variant = 'primary'): self
+    public function link(string $variant = 'primary'): static
     {
         return $this->class("link-$variant");
     }
@@ -347,7 +348,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|int $ratio {1x1 / 4x3 / 16x9 / 21x9, 0...100}
      */
-    public function ratio($ratio): self
+    public function ratio($ratio): static
     {
         $this->class('ratio');
 
@@ -371,7 +372,7 @@ class BSBaseComponent extends Component
      *                      4: t, e, b, s //
      *                      if null, then class not applied
      */
-    public function g(...$i): self
+    public function g(...$i): static
     {
         return $this->class(self::getCrossProp('g', ...$i));
     }
@@ -386,7 +387,7 @@ class BSBaseComponent extends Component
      *                      4: t, e, b, s //
      *                      if null, then class not applied
      */
-    public function p(...$i): self
+    public function p(...$i): static
     {
         return $this->class(self::getCrossProp('p', ...$i));
     }
@@ -401,7 +402,7 @@ class BSBaseComponent extends Component
      *                      4: t, e, b, s //
      *                      if null, then class not applied
      */
-    public function m(...$i): self
+    public function m(...$i): static
     {
         return $this->class(self::getCrossProp('m', ...$i));
     }
@@ -410,7 +411,7 @@ class BSBaseComponent extends Component
      * @param int $i {0...5}
      * @param string|null $bp {null, sm, md, lg, xl, xxl}
      */
-    public function gap(int $i, ?string $bp = null): self
+    public function gap(int $i, ?string $bp = null): static
     {
         $class = 'gap';
         $bp && $class .= "-$bp";
@@ -422,7 +423,7 @@ class BSBaseComponent extends Component
     /**
      * @param string $modifiers {top, end, bottom, start, circle, pill, 0...3}
      */
-    public function rounded(string ...$modifiers): self
+    public function rounded(string ...$modifiers): static
     {
 
         if (!$modifiers) {
@@ -442,7 +443,7 @@ class BSBaseComponent extends Component
      *
      * COLOR: {primary, secondary, success, danger, warning, info, light, dark}
      */
-    public function border(?string ...$modifiers): self
+    public function border(?string ...$modifiers): static
     {
 
         if (!$modifiers) {
@@ -499,17 +500,17 @@ class BSBaseComponent extends Component
         return $prop . $modifier . '-' . $i;
     }
 
-    public function dataBS(string $prop, string $val): self
+    public function dataBS(string $prop, string $val): static
     {
         return $this->{"data-bs-${prop}"}($val);
     }
 
-    public function aria(string $prop, string $val): self
+    public function aria(string $prop, string $val): static
     {
         return $this->{"aria-${prop}"}($val);
     }
 
-    public function styleBS(string $prop, string $val): self
+    public function styleBS(string $prop, string $val): static
     {
         return $this->style("--bs-$prop: $val");
     }
@@ -517,12 +518,12 @@ class BSBaseComponent extends Component
     /**
      * @param string $type {none / all / auto}
      */
-    public function userSelect(string $type = 'none'): self
+    public function userSelect(string $type = 'none'): static
     {
         return $this->class("user-select-$type");
     }
 
-    public function pe(bool $no_events): self
+    public function pe(bool $no_events): static
     {
         return $this->class($no_events ? 'pe-none' : 'pe-auto');
     }
@@ -530,7 +531,7 @@ class BSBaseComponent extends Component
     /**
      * @param string $type {hidden / visible / auto / scroll}
      */
-    public function overflow(string $type = 'hidden'): self
+    public function overflow(string $type = 'hidden'): static
     {
         return $this->class("overflow-$type");
     }
@@ -538,7 +539,7 @@ class BSBaseComponent extends Component
     /**
      * @param string|null $modifier {null / sm / lg / none}
      */
-    public function shadow(?string $modifier = null): self
+    public function shadow(?string $modifier = null): static
     {
         return $this->class($modifier ? "shadow-$modifier" : 'shadow');
     }
@@ -548,7 +549,7 @@ class BSBaseComponent extends Component
      * @param bool $rel_to_viewport
      * @param string|null $modifier {null / min / max}
      */
-    public function w(int $value, bool $rel_to_viewport = false, ?string $modifier = null): self
+    public function w(int $value, bool $rel_to_viewport = false, ?string $modifier = null): static
     {
         $class = '';
         $modifier && $class .= $modifier . '-';
@@ -563,7 +564,7 @@ class BSBaseComponent extends Component
      * @param bool $rel_to_viewport
      * @param string|null $modifier {null / min / max}
      */
-    public function h(int $value, bool $rel_to_viewport = false, ?string $modifier = null): self
+    public function h(int $value, bool $rel_to_viewport = false, ?string $modifier = null): static
     {
         $class = '';
         $modifier && $class .= $modifier . '-';
@@ -573,12 +574,12 @@ class BSBaseComponent extends Component
         return $this->class($class);
     }
 
-    public function visible(bool $is_visible = false): self
+    public function visible(bool $is_visible = false): static
     {
         return $this->class($is_visible ? 'visible' : 'unvisible');
     }
 
-    public function stretchedLink(): self
+    public function stretchedLink(): static
     {
         return $this->class('stretched-link');
     }

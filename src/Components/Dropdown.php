@@ -26,7 +26,7 @@ class Dropdown extends BSBaseComponent
             );
     }
 
-    public function addItem(string $label, string $href, bool $active = false, bool $disabled = false): self
+    public function addItem(string $label, string $href, bool $active = false, bool $disabled = false): static
     {
         $this->list->___(
             BSPure::li()(
@@ -42,7 +42,7 @@ class Dropdown extends BSBaseComponent
         return $this;
     }
 
-    public function addDivider(): self
+    public function addDivider(): static
     {
         $this->list->___(
             BSPure::li()(BSPure::hr()->class('dropdown-divider'))

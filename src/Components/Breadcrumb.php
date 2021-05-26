@@ -15,12 +15,12 @@ class Breadcrumb extends BSBaseComponent
         parent::___($this->list = BSPure::ol()->class('breadcrumb'));
     }
 
-    public function divider(string $divider = '>'): self
+    public function divider(string $divider = '>'): static
     {
         return $this->styleBS('breadcrumb-divider', $divider);
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         $this->list->___(...$children);
         return $this;

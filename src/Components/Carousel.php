@@ -24,7 +24,7 @@ class Carousel extends BSBaseComponent
         parent::___($this->inner = BSPure::div()->class('carousel-inner'));
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         foreach ($children as $child) {
             $this->inner->___(
@@ -37,19 +37,19 @@ class Carousel extends BSBaseComponent
         return $this;
     }
 
-    public function setActive(int $index): self
+    public function setActive(int $index): static
     {
         $this->active = $index;
         return $this;
     }
 
-    public function withControls(bool $activate): self
+    public function withControls(bool $activate): static
     {
         $this->controls = $activate;
         return $this;
     }
 
-    public function withIndicators(bool $activate): self
+    public function withIndicators(bool $activate): static
     {
         $this->indicators = $activate;
         return $this;
@@ -103,12 +103,12 @@ class Carousel extends BSBaseComponent
         return $list;
     }
 
-    public function isFade(): self
+    public function isFade(): static
     {
         return $this->class('carousel-fade');
     }
 
-    public function isDark(): self
+    public function isDark(): static
     {
         return $this->class('carousel-dark');
     }

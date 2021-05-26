@@ -24,31 +24,31 @@ class Modal extends BSBaseComponent
         );
     }
 
-    public function ___(...$children): self
+    public function ___(...$children): static
     {
         $this->content->___(...$children);
         return $this;
     }
 
-    public function fade(): self
+    public function fade(): static
     {
         return $this->class('fade');
     }
 
-    public function static(): self
+    public function static(): static
     {
         return $this
             ->dataBS('backdrop', 'static')
             ->dataBS('keyboard', "false");
     }
 
-    public function scrollable(): self
+    public function scrollable(): static
     {
         $this->dialog->class('modal-dialog-scrollable');
         return $this;
     }
 
-    public function centered(): self
+    public function centered(): static
     {
         $this->dialog->class('modal-dialog-centered');
         return $this;
