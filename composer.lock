@@ -8,16 +8,16 @@
     "packages": [
         {
             "name": "jesspinkman/pure",
-            "version": "3.0.0",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/JessPinkman/Pure.git",
-                "reference": "29376da15847bbf184c582627a52729839e50229"
+                "reference": "9142bf353d60affbae805d03b6c0f3a0c6100fa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/29376da15847bbf184c582627a52729839e50229",
-                "reference": "29376da15847bbf184c582627a52729839e50229",
+                "url": "https://api.github.com/repos/JessPinkman/Pure/zipball/9142bf353d60affbae805d03b6c0f3a0c6100fa7",
+                "reference": "9142bf353d60affbae805d03b6c0f3a0c6100fa7",
                 "shasum": ""
             },
             "require": {
@@ -42,9 +42,9 @@
             "description": "Create HTML Markups without HTML code, easily nest elements and set attributes",
             "support": {
                 "issues": "https://github.com/JessPinkman/Pure/issues",
-                "source": "https://github.com/JessPinkman/Pure/tree/3.0.0"
+                "source": "https://github.com/JessPinkman/Pure/tree/3.0.4"
             },
-            "time": "2021-05-26T10:53:46+00:00"
+            "time": "2021-05-27T02:07:23+00:00"
         }
     ],
     "packages-dev": [],
